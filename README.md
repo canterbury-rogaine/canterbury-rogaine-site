@@ -1,7 +1,7 @@
 # Canterbury Rogaine website
 
 A minimal Jekyll site hosted on GitHub Pages. Edit the homepage in `index.md`;
-Jekyll converts Markdown to HTML using `_layouts/default.html`.
+it contains HTML sections with Jekyll asset links, using `_layouts/default.html`.
 No Node.js, JavaScript framework, paid hosting, or deployment secrets are needed.
 
 ## First deployment
@@ -53,10 +53,11 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 
 ## Editing the site
 
-- `index.md`: homepage content; retain the YAML front matter at the top.
+- `index.md`: homepage content and event details; retain the YAML front matter.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
+- `assets/images/logo.jpg`: supplied temporary logo; replace with a higher-quality asset later.
 - `404.html`: missing-page content.
 - `.github/workflows/pages.yml`: build validation and deployment.
 
@@ -69,6 +70,11 @@ For a custom domain later, configure it in GitHub Pages, update `url`, set
 `baseurl` to an empty string, and update the workflow's stylesheet path check.
 
 ## Why Jekyll?
+
+The homepage content was adapted from <https://www.canterburyrogaine.com/Default.aspx>.
+The next series is planned for January 2027. The displayed 2026 schedule and
+fees are explicitly marked as placeholders until updated information is available.
+The entry button is deliberately disabled and has no registration link or handler.
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and
 shared layouts while keeping the infrastructure small. A larger JavaScript
