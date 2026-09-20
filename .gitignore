@@ -1,0 +1,12 @@
+/_site/
+/.sass-cache/
+/.jekyll-cache/
+/.jekyll-metadata
+/.bundle/
+/vendor/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example

@@ -1,0 +1,20 @@
+title: Canterbury Rogaine
+description: Canterbury Rogaine — website coming soon.
+url: "https://canterbury-rogaine.github.io"
+baseurl: "/canterbury-rogaine-site"
+lang: en-NZ
+timezone: Pacific/Auckland
+markdown: kramdown
+strict_front_matter: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
