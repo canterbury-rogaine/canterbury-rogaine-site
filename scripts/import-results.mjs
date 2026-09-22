@@ -113,33 +113,16 @@ description: ${yamlString(`Historical results for ${title}.`)}
 
 const years = Map.groupBy(events, ({ year }) => year);
 const archive = `---
+layout: results_archive
 title: Results archive
 description: Historical Canterbury Rogaine Series results from 2011 to 2025.
 permalink: /results/
+event_count: ${events.length}
+year_count: ${years.size}
+archive_range: 2011–2025
 ---
-<header class="site-header container archive-header">
-  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
-  <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/results/' | relative_url }}" aria-current="page">Results</a></nav>
-  <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
-</header>
-
-<section class="archive-hero container">
-  <p class="eyebrow"><span class="red-line"></span> The record</p>
-  <h1>Results archive.</h1>
-  <p>Canterbury Rogaine results from 2011 to 2025. Select an event to see every published placing, score and grade result.</p>
-  <div class="archive-stats"><span><strong>${events.length}</strong> events</span><span><strong>${years.size}</strong> years</span><span><strong>2011–2025</strong> archive</span></div>
-</section>
-
-<section class="results-archive container" aria-labelledby="archive-heading">
-  <h2 id="archive-heading" class="visually-hidden">Events by year</h2>
-  ${[...years.entries()].sort(([a], [b]) => b - a).map(([year, yearEvents]) => `<section class="result-year" aria-labelledby="year-${year}">
-    <div class="year-heading"><h2 id="year-${year}">${year}</h2><span>${yearEvents.length} ${yearEvents.length === 1 ? "event" : "events"}</span></div>
-    <div class="archive-list">${yearEvents.map((event, index) => `<a class="archive-event" href="{{ '/results/events/${event.id}.html' | relative_url }}"><span class="event-index">${String(index + 1).padStart(2, "0")}</span><span><strong>${event.title.replace(/ - (?:\d{1,2} )?[A-Za-z]+ \d{4}$/, "")}</strong><small>${event.series}</small></span><span class="archive-arrow" aria-hidden="true">↗</span></a>`).join("")}</div>
-  </section>`).join("\n  ")}
-</section>
-
-<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><a href="{{ '/' | relative_url }}">Home</a><a href="#main" class="back-top">Back to top ↑</a></div></footer>
+${[...years.entries()].sort(([a], [b]) => b - a).map(([year, yearEvents]) => `## ${year}\n\n${yearEvents.map((event) => `- [${event.title.replace(/ - (?:\d{1,2} )?[A-Za-z]+ \d{4}$/, "")}]({{ '/results/events/${event.id}.html' | relative_url }})\n  *${event.series}*`).join("\n")}`).join("\n\n")}
 `;
 
-fs.writeFileSync(path.join(root, "results.html"), archive);
+fs.writeFileSync(path.join(root, "results.md"), archive);
 console.log(`Imported ${events.length} events across ${years.size} years.`);

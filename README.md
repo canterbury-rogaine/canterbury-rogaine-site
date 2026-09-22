@@ -54,7 +54,7 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 ## Editing the site
 
 - `index.md`: homepage content and event details; retain the YAML front matter.
-- `results.html`: results archive summary, with the latest years first.
+- `results.md`: easy-to-edit results list, with the latest years first.
 - `results/events/`: 45 historical event pages containing the published results.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
@@ -85,14 +85,24 @@ It preserves every published division, team, placing, score and grade code from
 2011–2025. Generated event pages are committed so deploying the site never
 depends on the legacy website remaining online.
 
-To repeat the import after downloading the legacy summary and event HTML files:
+Add future events near the top of `results.md` using normal Markdown:
+
+```md
+## 2027
+
+- [Event 1 – Location]({{ '/results/events/event-1.html' | relative_url }})
+  *Summer Rogaine Series 2027*
+```
+
+Also update the three archive totals in the file's front matter. To repeat the
+full legacy import after downloading the old summary and event HTML files:
 
 ```sh
 node scripts/import-results.mjs path/to/Results.aspx path/to/event-html-directory
 ```
 
 The event directory must contain one file per event named by its legacy numeric
-ID, such as `1078.html`. Review and commit the regenerated `results.html` and
+ID, such as `1078.html`. Review and commit the regenerated `results.md` and
 `results/events/` files after running the importer.
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and

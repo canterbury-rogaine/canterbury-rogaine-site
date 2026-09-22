@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header class="site-header container archive-header">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
+  <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/results/' | relative_url }}" aria-current="page">Results</a></nav>
+  <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
+</header>
+
+<section class="archive-hero container">
+  <p class="eyebrow"><span class="red-line"></span> The record</p>
+  <h1>Results archive.</h1>
+  <p>Canterbury Rogaine results from {{ page.archive_range }}. Select an event to see every published placing, score and grade result.</p>
+  <div class="archive-stats"><span><strong>{{ page.event_count }}</strong> events</span><span><strong>{{ page.year_count }}</strong> years</span><span><strong>{{ page.archive_range }}</strong> archive</span></div>
+</section>
+
+<section class="results-archive container" aria-label="Events by year">
+  <div class="results-list">
+    {{ content }}
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><a href="{{ '/' | relative_url }}">Home</a><a href="#main" class="back-top">Back to top ↑</a></div></footer>
