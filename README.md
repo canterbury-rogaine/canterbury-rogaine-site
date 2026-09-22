@@ -54,12 +54,15 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 ## Editing the site
 
 - `index.md`: homepage content and event details; retain the YAML front matter.
+- `results.html`: results archive summary, with the latest years first.
+- `results/events/`: 45 historical event pages containing the published results.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
 - `assets/images/logo.jpg`: supplied temporary logo; replace with a higher-quality asset later.
 - `404.html`: missing-page content.
 - `.github/workflows/pages.yml`: build validation and deployment.
+- `scripts/import-results.mjs`: repeatable importer for the legacy results archive.
 
 For another page, add a Markdown file with YAML front matter. Use Jekyll's
 `relative_url` filter for internal links and assets so the repository path is
@@ -75,6 +78,22 @@ The homepage content was adapted from <https://www.canterburyrogaine.com/Default
 The next series is planned for January 2027. The displayed 2026 schedule and
 fees are explicitly marked as placeholders until updated information is available.
 The entry button is deliberately disabled and has no registration link or handler.
+
+The results archive was imported from
+<https://www.canterburyrogaine.com/Results.aspx> and its 45 linked event records.
+It preserves every published division, team, placing, score and grade code from
+2011–2025. Generated event pages are committed so deploying the site never
+depends on the legacy website remaining online.
+
+To repeat the import after downloading the legacy summary and event HTML files:
+
+```sh
+node scripts/import-results.mjs path/to/Results.aspx path/to/event-html-directory
+```
+
+The event directory must contain one file per event named by its legacy numeric
+ID, such as `1078.html`. Review and commit the regenerated `results.html` and
+`results/events/` files after running the importer.
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and
 shared layouts while keeping the infrastructure small. A larger JavaScript

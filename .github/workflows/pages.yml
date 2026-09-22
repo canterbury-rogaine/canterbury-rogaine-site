@@ -29,8 +29,11 @@ jobs:
         run: |
           test -s _site/index.html
           test -s _site/404.html
+          test -s _site/results/index.html
           test -s _site/assets/css/style.css
+          test "$(find _site/results/events -type f -name '*.html' | wc -l)" -eq 45
           grep -q '/canterbury-rogaine-site/assets/css/style.css' _site/index.html
+          grep -q 'Results archive' _site/results/index.html
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3

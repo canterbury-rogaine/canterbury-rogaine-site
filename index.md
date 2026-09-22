@@ -3,7 +3,7 @@
 
 <header class="site-header container">
   <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
-  <nav aria-label="Main navigation"><a href="#events">The events</a><a href="#details">On the day</a><a href="#entry">Entry fees</a></nav>
+  <nav aria-label="Main navigation"><a href="#events">The events</a><a href="#details">On the day</a><a href="#entry">Entry fees</a><a href="{{ '/results/' | relative_url }}">Results</a></nav>
   <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
 </header>
 
