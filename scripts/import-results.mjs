@@ -26,6 +26,11 @@ const decodeText = (value) => value
   .trim();
 
 const yamlString = (value) => JSON.stringify(value.replace(/\uFFFD/g, "�"));
+const markdownCell = (value) => decodeText(value)
+  .replace(/\\/g, "\\\\")
+  .replace(/\|/g, "\\|")
+  .replace(/\*/g, "\\*")
+  .replace(/_/g, "\\_");
 const summaryHtml = fs.readFileSync(summaryFile, "utf8");
 const tokenPattern = /<h3>([\s\S]*?)<\/h3>|eventResults\.aspx\?id=(\d+)[\s\S]*?<\/a>/gi;
 const events = [];
@@ -67,48 +72,32 @@ for (const event of events) {
 
   while ((tableMatch = tablePattern.exec(resultsContent))) {
     const division = decodeText(tableMatch[1]);
-    let table = tableMatch[2]
-      .replace(/\sstyle=['"][^'"]*['"]/gi, "")
-      .replace(/<tr class=['"]resultsHeader['"]>([\s\S]*?)<\/tr>/i, (_, row) => {
-        const headers = row.replace(/<td[^>]*>/gi, '<th scope="col">').replace(/<\/td>/gi, "</th>");
-        return `<thead><tr>${headers}</tr></thead><tbody>`;
-      })
-      .replace(/<tr><td>\s*<\/td><td>\s*<\/td><td>\s*<\/td><td>\s*<\/td><\/tr>/gi, "")
-      .trim();
-    if (table.includes("<tbody>")) table += "</tbody>";
-    tables.push({ division, table });
+    const sourceRows = [...tableMatch[2].matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)]
+      .map((row) => [...row[1].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/gi)].map((cell) => markdownCell(cell[1])));
+    const headers = sourceRows.shift();
+    const rows = sourceRows
+      .map((row) => row.slice(0, headers.length))
+      .filter((row) => row.some(Boolean));
+
+    if (!headers || !rows.length) throw new Error(`Empty result table for ${event.id}: ${division}`);
+    tables.push({ division, headers, rows });
   }
 
   if (!tables.length) throw new Error(`No result tables found for ${event.id}: ${title}`);
 
   const page = `---
+layout: result
 title: ${yamlString(title)}
 description: ${yamlString(`Historical results for ${title}.`)}
+year: ${event.year}
+series: ${yamlString(event.series)}
 ---
-<header class="site-header container archive-header">
-  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
-  <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/results/' | relative_url }}" aria-current="page">Results</a></nav>
-  <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
-</header>
-
-<article class="result-page container">
-  <a class="breadcrumb" href="{{ '/results/' | relative_url }}">← All results</a>
-  <div class="result-title">
-    <p class="eyebrow">Results archive · ${event.year}</p>
-    <h1>${title}</h1>
-    <p>${event.series}</p>
-  </div>
-  ${tables.map(({ division, table }, divisionIndex) => `<section class="result-division" aria-labelledby="division-${event.id}-${divisionIndex}">
-    <div class="result-division-heading"><h2 id="division-${event.id}-${divisionIndex}">${division}</h2><span>${(table.match(/<tr>/g) || []).length - 1} recorded teams</span></div>
-    <div class="table-scroll" tabindex="0" role="region" aria-label="${division} results table"><table class="results-table">${table}</table></div>
-  </section>`).join("\n  ")}
-  <p class="archive-source">Archived from the former Canterbury Rogaine Series website. Names, placings, scores and grade codes are reproduced as originally published.</p>
-</article>
-
-<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><a href="{{ '/results/' | relative_url }}">Results archive</a><a href="#main" class="back-top">Back to top ↑</a></div></footer>
+${tables.map(({ division, headers, rows }) => `## ${division}\n\n*${rows.length} recorded teams*\n\n| ${headers.join(" | ")} |\n| ${headers.map(() => "---").join(" | ")} |\n${rows.map((row) => `| ${row.join(" | ")} |`).join("\n")}`).join("\n\n")}
 `;
 
-  fs.writeFileSync(path.join(outputDirectory, `${event.id}.html`), page);
+  const oldHtmlPage = path.join(outputDirectory, `${event.id}.html`);
+  if (fs.existsSync(oldHtmlPage)) fs.unlinkSync(oldHtmlPage);
+  fs.writeFileSync(path.join(outputDirectory, `${event.id}.md`), page);
 }
 
 const years = Map.groupBy(events, ({ year }) => year);

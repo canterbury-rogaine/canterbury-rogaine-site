@@ -668,77 +668,74 @@ h1 em {
   color:var(--muted);
 }
 
-.result-division {
-  margin-top:56px;
-}
-
-.result-division-heading {
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-  margin-bottom:18px;
-}
-
-.result-division-heading h2 {
-  margin:0;
+.result-content h2 {
+  margin:56px 0 5px;
   font-size:1.7rem;
 }
 
-.result-division-heading span {
+.result-content h2:first-child {
+  margin-top:0;
+}
+
+.result-content h2 + p {
+  margin-bottom:18px;
   color:var(--muted);
   font-size:.7rem;
-  white-space:nowrap;
 }
 
-.table-scroll {
+.result-content h2 + p em {
+  font-style:normal;
+}
+
+.result-content table {
+  display:block;
+  width:100%;
+  max-width:100%;
   overflow-x:auto;
+  border-collapse:collapse;
   border-top:3px solid var(--red);
   border-bottom:1px solid var(--line);
-}
-
-.table-scroll:focus-visible {
-  outline:3px solid var(--red);
-  outline-offset:4px;
-}
-
-.results-table {
-  width:100%;
-  min-width:680px;
-  border-collapse:collapse;
   font-size:.78rem;
 }
 
-.results-table th,
-.results-table td {
+.result-content th,
+.result-content td {
   padding:13px 16px;
   text-align:left;
   vertical-align:top;
   border-bottom:1px solid var(--line);
 }
 
-.results-table th {
+.result-content th {
   background:#eaece3;
   font-size:.65rem;
   text-transform:uppercase;
   letter-spacing:1px;
 }
 
-.results-table th:first-child,
-.results-table td:first-child {
+.result-content th:first-child,
+.result-content td:first-child {
+  min-width:70px;
   width:70px;
   text-align:center;
 }
 
-.results-table th:nth-child(3),
-.results-table td:nth-child(3),
-.results-table th:nth-child(4),
-.results-table td:nth-child(4) {
+.result-content th:nth-child(2),
+.result-content td:nth-child(2) {
+  min-width:360px;
+  width:100%;
+}
+
+.result-content th:nth-child(3),
+.result-content td:nth-child(3),
+.result-content th:nth-child(4),
+.result-content td:nth-child(4) {
+  min-width:150px;
   width:150px;
   white-space:nowrap;
 }
 
-.results-table tbody tr:nth-child(even) {
+.result-content tbody tr:nth-child(even) {
   background:#f0efe9;
 }
 
@@ -959,17 +956,11 @@ h1 em {
   .result-title {
     margin-bottom:44px;
   }
-  .result-division {
+  .result-content h2 {
     margin-top:42px;
   }
-  .result-division-heading {
-    display:block;
-  }
-  .result-division-heading h2 {
-    margin-bottom:5px;
-  }
-  .results-table th,
-  .results-table td {
+  .result-content th,
+  .result-content td {
     padding:11px 12px;
   }
 }

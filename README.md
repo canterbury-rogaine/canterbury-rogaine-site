@@ -55,7 +55,7 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 
 - `index.md`: homepage content and event details; retain the YAML front matter.
 - `results.md`: easy-to-edit results list, with the latest years first.
-- `results/events/`: 45 historical event pages containing the published results.
+- `results/events/`: 45 Markdown event pages containing the published results.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
@@ -104,6 +104,27 @@ node scripts/import-results.mjs path/to/Results.aspx path/to/event-html-director
 The event directory must contain one file per event named by its legacy numeric
 ID, such as `1078.html`. Review and commit the regenerated `results.md` and
 `results/events/` files after running the importer.
+
+Each event page uses `_layouts/result.html`; its file only needs metadata,
+Markdown headings and tables. A new event result page can follow this structure:
+
+```md
+---
+layout: result
+title: Event 1 – Location – 13 January 2027
+year: 2027
+series: Summer Rogaine Series 2027
+---
+
+## 2hr event
+
+*2 recorded teams*
+
+| Place | Team | Score (penalty) | Grade Place |
+| --- | --- | --- | --- |
+| 1 | Team One | 1230 | X1 |
+| 2 | Team Two | 1110 | F1 |
+```
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and
 shared layouts while keeping the infrastructure small. A larger JavaScript

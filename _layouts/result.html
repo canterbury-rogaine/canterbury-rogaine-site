@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header class="site-header container archive-header">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
+  <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/results/' | relative_url }}" aria-current="page">Results</a></nav>
+  <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
+</header>
+
+<article class="result-page container">
+  <a class="breadcrumb" href="{{ '/results/' | relative_url }}">← All results</a>
+  <div class="result-title">
+    <p class="eyebrow">Results archive · {{ page.year }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.series }}</p>
+  </div>
+  <div class="result-content">
+    {{ content }}
+  </div>
+  <p class="archive-source">Archived from the former Canterbury Rogaine Series website. Names, placings, scores and grade codes are reproduced as originally published.</p>
+</article>
+
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><a href="{{ '/results/' | relative_url }}">Results archive</a><a href="#main" class="back-top">Back to top ↑</a></div></footer>
