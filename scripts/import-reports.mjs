@@ -99,7 +99,7 @@ for (const sourceName of fs.readdirSync(sourceDirectory).filter((name) => /^\d+\
     if (localName && fs.existsSync(path.join(imageDirectory, localName))) {
       markdown = `![${alt}]({{ '/assets/images/reports/${localName}' | relative_url }})`;
     } else {
-      markdown = `> **Historical image unavailable.** ${alt ? `${alt}. ` : ""}[Original image reference](${decode(src)})`;
+      markdown = `> **Image unavailable.** ${alt ? `${alt}. ` : ""}[Original image reference](${decode(src)})`;
     }
     const index = images.push(markdown) - 1;
     imageIndex += 1;
@@ -143,17 +143,11 @@ ${body}
 
 reports.sort((a, b) => b.timestamp - a.timestamp);
 const years = Map.groupBy(reports, ({ year }) => year);
-const earliest = Math.min(...reports.map(({ year }) => year));
-const latest = Math.max(...reports.map(({ year }) => year));
-const archiveRange = `${earliest}–${latest}`;
 const archive = `---
 layout: reports_archive
 title: Event reports
-description: Canterbury Rogaine Series event reports from ${archiveRange}.
+description: Canterbury Rogaine Series event reports.
 permalink: /reports/
-report_count: ${reports.length}
-year_count: ${years.size}
-archive_range: ${archiveRange}
 ---
 ${[...years.entries()].sort(([a], [b]) => b - a).map(([year, yearReports]) => `## ${year}\n\n${yearReports.map((report) => `- [${report.title}]({{ '/reports/events/${report.id}.html' | relative_url }})\n  *${report.date}*`).join("\n")}`).join("\n\n")}
 `;

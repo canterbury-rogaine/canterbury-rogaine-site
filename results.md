@@ -1,11 +1,8 @@
 ---
 layout: results_archive
-title: Results archive
-description: Historical Canterbury Rogaine Series results from 2011 to 2025.
+title: Results
+description: Canterbury Rogaine Series event results.
 permalink: /results/
-event_count: 45
-year_count: 14
-archive_range: 2011–2025
 ---
 ## 2025
 

@@ -88,7 +88,7 @@ for (const event of events) {
   const page = `---
 layout: result
 title: ${yamlString(title)}
-description: ${yamlString(`Historical results for ${title}.`)}
+description: ${yamlString(`Results for ${title}.`)}
 year: ${event.year}
 series: ${yamlString(event.series)}
 ---
@@ -103,12 +103,9 @@ ${tables.map(({ division, headers, rows }) => `## ${division}\n\n*${rows.length}
 const years = Map.groupBy(events, ({ year }) => year);
 const archive = `---
 layout: results_archive
-title: Results archive
-description: Historical Canterbury Rogaine Series results from 2011 to 2025.
+title: Results
+description: Canterbury Rogaine Series event results.
 permalink: /results/
-event_count: ${events.length}
-year_count: ${years.size}
-archive_range: 2011–2025
 ---
 ${[...years.entries()].sort(([a], [b]) => b - a).map(([year, yearEvents]) => `## ${year}\n\n${yearEvents.map((event) => `- [${event.title.replace(/ - (?:\d{1,2} )?[A-Za-z]+ \d{4}$/, "")}]({{ '/results/events/${event.id}.html' | relative_url }})\n  *${event.series}*`).join("\n")}`).join("\n\n")}
 `;

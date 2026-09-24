@@ -56,17 +56,17 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 - `index.md`: homepage content and event details; retain the YAML front matter.
 - `results.md`: easy-to-edit results list, with the latest years first.
 - `results/events/`: 45 Markdown event pages containing the published results.
-- `reports.md`: newest-first archive of the historical event reports.
-- `reports/events/`: eight Markdown report pages containing the original articles.
+- `reports.md`: newest-first list of event reports.
+- `reports/events/`: Markdown pages containing the event reports.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
 - `assets/images/logo.jpg`: supplied temporary logo; replace with a higher-quality asset later.
-- `assets/images/reports/`: locally preserved photographs from the old reports.
+- `assets/images/reports/`: locally stored report photographs.
 - `404.html`: missing-page content.
 - `.github/workflows/pages.yml`: build validation and deployment.
-- `scripts/import-results.mjs`: repeatable importer for the legacy results archive.
-- `scripts/import-reports.mjs`: repeatable importer for the legacy event reports.
+- `scripts/import-results.mjs`: repeatable result importer.
+- `scripts/import-reports.mjs`: repeatable report importer.
 
 For another page, add a Markdown file with YAML front matter. Use Jekyll's
 `relative_url` filter for internal links and assets so the repository path is
@@ -83,11 +83,11 @@ The next series is planned for January 2027. The displayed 2026 schedule and
 fees are explicitly marked as placeholders until updated information is available.
 The entry button is deliberately disabled and has no registration link or handler.
 
-The results archive was imported from
+The initial results were imported from
 <https://www.canterburyrogaine.com/Results.aspx> and its 45 linked event records.
 It preserves every published division, team, placing, score and grade code from
-2011–2025. Generated event pages are committed so deploying the site never
-depends on the legacy website remaining online.
+2011–2025. Generated event pages are committed so deployment has no external
+content dependency.
 
 Add future events near the top of `results.md` using normal Markdown:
 
@@ -98,14 +98,13 @@ Add future events near the top of `results.md` using normal Markdown:
   *Summer Rogaine Series 2027*
 ```
 
-Also update the three archive totals in the file's front matter. To repeat the
-full legacy import after downloading the old summary and event HTML files:
+To repeat the full import after downloading the summary and event HTML files:
 
 ```sh
 node scripts/import-results.mjs path/to/Results.aspx path/to/event-html-directory
 ```
 
-The event directory must contain one file per event named by its legacy numeric
+The event directory must contain one file per event named by its numeric
 ID, such as `1078.html`. Review and commit the regenerated `results.md` and
 `results/events/` files after running the importer.
 
@@ -130,15 +129,15 @@ series: Summer Rogaine Series 2027
 | 2 | Team Two | 1110 | F1 |
 ```
 
-The report archive was imported from
+The initial reports were imported from
 <https://www.canterburyrogaine.com/Reports.aspx>. To regenerate it from saved
-copies of the individual legacy report pages:
+copies of the individual report pages:
 
 ```sh
 node scripts/import-reports.mjs path/to/report-html-directory
 ```
 
-Each source file must use its legacy numeric ID, such as `34.html`. The importer
+Each source file must use its numeric ID, such as `34.html`. The importer
 generates `reports.md` and the Markdown files under `reports/events/`.
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and

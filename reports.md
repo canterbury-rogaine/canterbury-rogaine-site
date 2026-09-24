@@ -1,11 +1,8 @@
 ---
 layout: reports_archive
 title: Event reports
-description: Canterbury Rogaine Series event reports from 2011–2017.
+description: Canterbury Rogaine Series event reports.
 permalink: /reports/
-report_count: 8
-year_count: 5
-archive_range: 2011–2017
 ---
 ## 2017
 
