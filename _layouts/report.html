@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header class="site-header container archive-header">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="Canterbury Rogaine Series home"><img src="{{ '/assets/images/logo.jpg' | relative_url }}" alt="Canterbury Rogaine Series" width="200" height="200"></a>
+  <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/reports/' | relative_url }}" aria-current="page">Reports</a><a href="{{ '/results/' | relative_url }}">Results</a></nav>
+  <span class="header-location">Christchurch, NZ <span aria-hidden="true">↗</span></span>
+</header>
+
+<article class="report-page container">
+  <a class="breadcrumb" href="{{ '/reports/' | relative_url }}">← All reports</a>
+  <header class="report-title">
+    <p class="eyebrow">Event report · {{ page.year }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date }}</p>
+  </header>
+  <div class="report-content">
+    {{ content }}
+  </div>
+  <p class="archive-source">Archived from the former Canterbury Rogaine Series website. The report text is reproduced as originally published, with minor formatting changes for readability.</p>
+</article>
+
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><a href="{{ '/reports/' | relative_url }}">Report archive</a><a href="#main" class="back-top">Back to top ↑</a></div></footer>

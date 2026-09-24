@@ -746,6 +746,104 @@ h1 em {
   font-size:.7rem;
 }
 
+.report-page {
+  padding-block:50px 90px;
+}
+
+.report-title {
+  max-width:840px;
+  margin-bottom:55px;
+}
+
+.report-title h1 {
+  font-size:clamp(2.4rem,5vw,4.5rem);
+  margin-bottom:18px;
+}
+
+.report-title > p:last-child {
+  color:var(--muted);
+  font-size:.85rem;
+}
+
+.report-content {
+  max-width:800px;
+  font-size:1rem;
+  line-height:1.85;
+}
+
+.report-content p {
+  margin-bottom:24px;
+}
+
+.report-content h2 {
+  margin:52px 0 20px;
+  font-size:1.8rem;
+}
+
+.report-content img {
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  margin:34px auto 12px;
+  border-radius:2px;
+}
+
+.report-content img + em,
+.report-content p > em:only-child {
+  color:var(--muted);
+  font-size:.75rem;
+}
+
+.report-content blockquote {
+  margin:30px 0;
+  padding:18px 22px;
+  color:var(--muted);
+  background:#eaece3;
+  border-left:3px solid var(--red);
+}
+
+.report-content blockquote p {
+  margin:0;
+}
+
+.report-content table {
+  display:block;
+  width:100%;
+  max-width:100%;
+  margin:22px 0 34px;
+  overflow-x:auto;
+  border-collapse:collapse;
+  border-top:3px solid var(--red);
+  border-bottom:1px solid var(--line);
+  font-size:.75rem;
+}
+
+.report-content th,
+.report-content td {
+  min-width:125px;
+  padding:11px 13px;
+  text-align:left;
+  vertical-align:top;
+  border-bottom:1px solid var(--line);
+}
+
+.report-content th {
+  background:#eaece3;
+  font-size:.62rem;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+}
+
+.report-content th:nth-child(3),
+.report-content td:nth-child(3) {
+  min-width:250px;
+}
+
+.report-content tbody tr:nth-child(even) {
+  background:#f0efe9;
+}
+
 @media(min-width:1400px) {
   .hero {
     gap:80px
@@ -802,8 +900,10 @@ h1 em {
     height:90px
   }
   .site-header nav {
-    gap:15px;
-    font-size:.65rem
+    gap:8px 13px;
+    font-size:.65rem;
+    flex-wrap:wrap;
+    justify-content:flex-end;
   }
   .hero {
     grid-template-columns:1fr;
@@ -962,6 +1062,18 @@ h1 em {
   .result-content th,
   .result-content td {
     padding:11px 12px;
+  }
+  .report-page {
+    padding-block:35px 60px;
+  }
+  .report-title {
+    margin-bottom:40px;
+  }
+  .report-content {
+    font-size:.92rem;
+  }
+  .report-content h2 {
+    margin-top:40px;
   }
 }
 

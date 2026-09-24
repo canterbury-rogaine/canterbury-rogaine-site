@@ -56,13 +56,17 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 - `index.md`: homepage content and event details; retain the YAML front matter.
 - `results.md`: easy-to-edit results list, with the latest years first.
 - `results/events/`: 45 Markdown event pages containing the published results.
+- `reports.md`: newest-first archive of the historical event reports.
+- `reports/events/`: eight Markdown report pages containing the original articles.
 - `_config.yml`: site name, description, URL, and repository path.
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
 - `assets/images/logo.jpg`: supplied temporary logo; replace with a higher-quality asset later.
+- `assets/images/reports/`: locally preserved photographs from the old reports.
 - `404.html`: missing-page content.
 - `.github/workflows/pages.yml`: build validation and deployment.
 - `scripts/import-results.mjs`: repeatable importer for the legacy results archive.
+- `scripts/import-reports.mjs`: repeatable importer for the legacy event reports.
 
 For another page, add a Markdown file with YAML front matter. Use Jekyll's
 `relative_url` filter for internal links and assets so the repository path is
@@ -125,6 +129,17 @@ series: Summer Rogaine Series 2027
 | 1 | Team One | 1230 | X1 |
 | 2 | Team Two | 1110 | F1 |
 ```
+
+The report archive was imported from
+<https://www.canterburyrogaine.com/Reports.aspx>. To regenerate it from saved
+copies of the individual legacy report pages:
+
+```sh
+node scripts/import-reports.mjs path/to/report-html-directory
+```
+
+Each source file must use its legacy numeric ID, such as `34.html`. The importer
+generates `reports.md` and the Markdown files under `reports/events/`.
 
 Plain HTML would be sufficient for one page. Jekyll adds Markdown editing and
 shared layouts while keeping the infrastructure small. A larger JavaScript
