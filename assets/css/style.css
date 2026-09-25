@@ -735,6 +735,13 @@ h1 em {
   white-space:nowrap;
 }
 
+.result-content table.compact-results th:first-child,
+.result-content table.compact-results td:first-child {
+  min-width:140px;
+  width:140px;
+  text-align:left;
+}
+
 .result-content tbody tr:nth-child(even) {
   background:#f0efe9;
 }

@@ -101,14 +101,34 @@ ${tables.map(({ division, headers, rows }) => `## ${division}\n\n*${rows.length}
 }
 
 const years = Map.groupBy(events, ({ year }) => year);
+const latestImportedYear = Math.max(...years.keys());
+const resultsFile = path.join(root, "results.md");
+let newerSections = [];
+
+if (fs.existsSync(resultsFile)) {
+  const currentResults = fs.readFileSync(resultsFile, "utf8");
+  const headings = [...currentResults.matchAll(/^## (\d{4})\s*$/gm)];
+  newerSections = headings
+    .map((heading, index) => ({
+      year: Number(heading[1]),
+      content: currentResults.slice(
+        heading.index,
+        headings[index + 1]?.index ?? currentResults.length,
+      ).trim(),
+    }))
+    .filter(({ year }) => year > latestImportedYear)
+    .map(({ content }) => content);
+}
+
+const importedSections = [...years.entries()].sort(([a], [b]) => b - a).map(([year, yearEvents]) => `## ${year}\n\n${yearEvents.map((event) => `- [${event.title.replace(/ - (?:\d{1,2} )?[A-Za-z]+ \d{4}$/, "")}]({{ '/results/events/${event.id}.html' | relative_url }})\n  *${event.series}*`).join("\n")}`).join("\n\n");
 const archive = `---
 layout: results_archive
 title: Results
 description: Canterbury Rogaine Series event results.
 permalink: /results/
 ---
-${[...years.entries()].sort(([a], [b]) => b - a).map(([year, yearEvents]) => `## ${year}\n\n${yearEvents.map((event) => `- [${event.title.replace(/ - (?:\d{1,2} )?[A-Za-z]+ \d{4}$/, "")}]({{ '/results/events/${event.id}.html' | relative_url }})\n  *${event.series}*`).join("\n")}`).join("\n\n")}
+${[...newerSections, importedSections].filter(Boolean).join("\n\n")}
 `;
 
-fs.writeFileSync(path.join(root, "results.md"), archive);
+fs.writeFileSync(resultsFile, archive);
 console.log(`Imported ${events.length} events across ${years.size} years.`);

@@ -6,6 +6,12 @@ permalink: /results/
 ---
 ## 2026
 
+- [Event 1 - Halswell Quarry]({{ '/results/events/event-1-halswell-quarry-2026.html' | relative_url }})
+  *Further Faster Summer Rogaine Series 2026*
+- [Event 2 - Barnett Park]({{ '/results/events/event-2-barnett-park-2026.html' | relative_url }})
+  *Further Faster Summer Rogaine Series 2026*
+- [Event 3 - Victoria Park]({{ '/results/events/event-3-victoria-park-2026.html' | relative_url }})
+  *Further Faster Summer Rogaine Series 2026*
 - [Event 4 - Mt Vernon]({{ '/results/events/event-4-mt-vernon-2026.html' | relative_url }})
   *Further Faster Summer Rogaine Series 2026*
 
