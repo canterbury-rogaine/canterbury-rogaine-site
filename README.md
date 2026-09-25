@@ -23,7 +23,7 @@ The repository already uses `main` and has this origin:
 3. Open **Actions → Build and deploy GitHub Pages**. If the initial deployment
    ran before Pages was enabled, rerun it or choose **Run workflow** on `main`.
 4. After deployment succeeds, visit:
-   <https://canterbury-rogaine.github.io/canterbury-rogaine-site/>.
+   <https://www.canterburyrogaine.com/>.
 
 Pushes to `main` build and deploy automatically. Pull requests targeting `main`
 build and check the generated files without publishing. The workflow uses
@@ -40,7 +40,7 @@ bundle install
 bundle exec jekyll serve --host 127.0.0.1
 ```
 
-Visit <http://127.0.0.1:4000/canterbury-rogaine-site/>. Restart the server after
+Visit <http://127.0.0.1:4000/>. Restart the server after
 editing `_config.yml`. To check a production build locally:
 
 ```sh
@@ -69,12 +69,13 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 - `scripts/import-reports.mjs`: repeatable report importer.
 
 For another page, add a Markdown file with YAML front matter. Use Jekyll's
-`relative_url` filter for internal links and assets so the repository path is
-included. `.gitignore` excludes generated files and local dependencies;
+`relative_url` filter for internal links and assets. `.gitignore` excludes
+generated files and local dependencies;
 `.gitattributes` and `.editorconfig` keep line endings and formatting consistent.
 
-For a custom domain later, configure it in GitHub Pages, update `url`, set
-`baseurl` to an empty string, and update the workflow's stylesheet path check.
+The GitHub Pages custom domain is `www.canterburyrogaine.com`. `_config.yml`
+uses that production URL with an empty `baseurl`, so canonical URLs and internal
+links resolve from the custom domain root.
 
 ## Why Jekyll?
 

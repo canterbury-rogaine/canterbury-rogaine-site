@@ -1,7 +1,7 @@
 title: Canterbury Rogaine Series
 description: Summer evenings in the Port Hills. Event details for the Canterbury Rogaine Series, planned for January 2027.
-url: "https://canterbury-rogaine.github.io"
-baseurl: "/canterbury-rogaine-site"
+url: "https://www.canterburyrogaine.com"
+baseurl: ""
 lang: en-NZ
 timezone: Pacific/Auckland
 markdown: kramdown
