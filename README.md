@@ -55,7 +55,7 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 
 - `index.md`: homepage content and event details; retain the YAML front matter.
 - `results.md`: easy-to-edit results list, with the latest years first.
-- `results/events/`: 45 Markdown event pages containing the published results.
+- `results/events/`: Markdown event pages containing the published results.
 - `reports.md`: newest-first list of event reports.
 - `reports/events/`: Markdown pages containing the event reports.
 - `_config.yml`: site name, description, URL, and repository path.

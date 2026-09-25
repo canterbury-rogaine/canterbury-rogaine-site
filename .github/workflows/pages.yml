@@ -32,7 +32,7 @@ jobs:
           test -s _site/results/index.html
           test -s _site/reports/index.html
           test -s _site/assets/css/style.css
-          test "$(find _site/results/events -type f -name '*.html' | wc -l)" -eq 45
+          test "$(find _site/results/events -type f -name '*.html' | wc -l)" -ge 46
           test "$(find _site/reports/events -type f -name '*.html' | wc -l)" -eq 8
           grep -q '/canterbury-rogaine-site/assets/css/style.css' _site/index.html
           grep -q '<h1>Results' _site/results/index.html

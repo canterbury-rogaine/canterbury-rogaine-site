@@ -4,6 +4,11 @@ title: Results
 description: Canterbury Rogaine Series event results.
 permalink: /results/
 ---
+## 2026
+
+- [Event 4 - Mt Vernon]({{ '/results/events/event-4-mt-vernon-2026.html' | relative_url }})
+  *Further Faster Summer Rogaine Series 2026*
+
 ## 2025
 
 - [Event 1 - Halswell Quarry]({{ '/results/events/1078.html' | relative_url }})
