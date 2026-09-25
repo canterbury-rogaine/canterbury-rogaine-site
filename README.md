@@ -79,8 +79,8 @@ For a custom domain later, configure it in GitHub Pages, update `url`, set
 ## Why Jekyll?
 
 The homepage content was adapted from <https://www.canterburyrogaine.com/Default.aspx>.
-The next series is planned for January 2027. The displayed 2026 schedule and
-fees are explicitly marked as placeholders until updated information is available.
+The 2027 series dates and venues are published. Event-day details and fees are
+marked as pending confirmation until updated information is available.
 The entry button is deliberately disabled and has no registration link or handler.
 
 The initial results were imported from

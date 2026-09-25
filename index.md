@@ -12,7 +12,7 @@
     <p class="eyebrow"><span class="red-line"></span> Further Faster · Summer rogaine series</p>
     <h1 id="hero-title">Your evening.<br>Your route.<br><em>Your adventure.</em></h1>
     <p class="hero-intro">Swap the everyday for the Port Hills. Summer evenings of exploration, fresh air and a little friendly competition.</p>
-    <p class="season">Back in January 2027 <span>Details to be confirmed</span></p>
+    <p class="season">2027 series dates confirmed <span>Entry details to come</span></p>
     <div class="hero-actions"><button class="button" type="button" disabled aria-describedby="entry-status">Enter the series <span aria-hidden="true">↗</span></button><a class="text-link" href="#events">Explore the events ↓</a></div>
     <p id="entry-status" class="entry-status">Online entry is not available on this site yet.</p>
   </div>
@@ -34,23 +34,24 @@
 <div class="series-strip"><div class="container"><span><strong>Summer</strong> evenings outdoors</span><span><strong>Together</strong> is better</span><span><strong>Your</strong> pace, your route</span></div></div>
 
 <section id="events" class="section container" aria-labelledby="events-title">
-  <div class="section-heading"><div><p class="eyebrow">The calendar</p><h2 id="events-title">Places to explore.</h2></div><p>Next series planned<br><strong>January 2027</strong></p></div>
-  <p class="date-note"><strong>Placeholder schedule:</strong> the 2026 dates and venues below will be replaced when the 2027 programme is confirmed.</p>
+  <div class="section-heading"><div><p class="eyebrow">The calendar</p><h2 id="events-title">Places to explore.</h2></div><p>Five Wednesday events<br><strong>2027 series</strong></p></div>
+  <p class="date-note"><strong>Dates confirmed:</strong> entry details and fees will be added when available.</p>
   <div class="event-list">
-    <article class="event"><span class="event-number">01</span><div class="event-date"><strong>14</strong><span>JAN 2026</span></div><h3>Halswell Quarry</h3><span class="event-day">Wednesday</span></article>
-    <article class="event"><span class="event-number">02</span><div class="event-date"><strong>21</strong><span>JAN 2026</span></div><h3>Barnett Park</h3><span class="event-day">Wednesday</span></article>
-    <article class="event"><span class="event-number">03</span><div class="event-date"><strong>28</strong><span>JAN 2026</span></div><h3>Victoria Park</h3><span class="event-day">Wednesday</span></article>
-    <article class="event"><span class="event-number">04</span><div class="event-date"><strong>04</strong><span>FEB 2026</span></div><h3>Mt Vernon</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">TW</span><div class="event-date"><strong>16</strong><span>DEC 2026</span></div><h3>Christmas Twilight Rogaine · Corsair Bay</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">01</span><div class="event-date"><strong>13</strong><span>JAN 2027</span></div><h3>Halswell Quarry</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">02</span><div class="event-date"><strong>20</strong><span>JAN 2027</span></div><h3>Barnett Park</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">03</span><div class="event-date"><strong>27</strong><span>JAN 2027</span></div><h3>Mt Vernon</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">04</span><div class="event-date"><strong>03</strong><span>FEB 2027</span></div><h3>Victoria Park</h3><span class="event-day">Wednesday</span></article>
   </div>
 </section>
 
 <section id="details" class="details-section" aria-labelledby="details-title"><div class="container details-grid">
-  <div><p class="eyebrow">On the day</p><h2 id="details-title">A map. Your team.<br>A fresh perspective.</h2><p>Explore hills, tussock and forest at your own pace. Moderate fitness is enough; expert navigation isn’t needed. Families are welcome. Keep teammates within earshot.</p><p class="small-note">2026 information below, pending confirmation for 2027.</p></div>
+  <div><p class="eyebrow">On the day</p><h2 id="details-title">A map. Your team.<br>A fresh perspective.</h2><p>Explore hills, tussock and forest at your own pace. Moderate fitness is enough; expert navigation isn’t needed. Families are welcome. Keep teammates within earshot.</p><p class="small-note">Event-day details are pending confirmation for 2027.</p></div>
   <dl class="details-list"><div><dt>Registration</dt><dd>From 4:30 pm</dd></div><div><dt>Start window</dt><dd>5:00–7:00 pm</dd></div><div><dt>Scoring</dt><dd>Navlight electronic scoring</dd></div><div><dt>Plan ahead</dt><dd>Pre-entry speeds registration and guarantees a map.</dd></div><div><dt>Results</dt><dd>Published after each event at rogaine-results.com.</dd></div></dl>
 </div></section>
 
 <section id="entry" class="section container" aria-labelledby="entry-title">
-  <div class="section-heading"><div><p class="eyebrow">Bring your people</p><h2 id="entry-title">Make an evening of it.</h2></div><p>2026 pricing · NZD<br>2027 fees to be confirmed</p></div>
+  <div class="section-heading"><div><p class="eyebrow">Bring your people</p><h2 id="entry-title">Make an evening of it.</h2></div><p>Indicative pricing · NZD<br>2027 fees to be confirmed</p></div>
   <div class="price-grid">
     <article class="price-card"><h3>Adults</h3><p class="price">$30<span> / event</span></p><p class="series-price">$100 for the series</p></article>
     <article class="price-card"><h3>Junior / Student</h3><p class="price">$25<span> / event</span></p><p class="series-price">$80 for the series</p></article>
@@ -59,4 +60,4 @@
   <p class="responsibility"><strong>Participant responsibility</strong> · Participation is at your own risk. Organisers and landowners accept no responsibility for accidents or injuries.</p>
 </section>
 
-<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><p>2026 series supporter<br><a href="https://www.furtherfaster.co.nz/">Further Faster ↗</a></p><a href="#main" class="back-top">Back to top ↑</a></div></footer>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><p>Series supporter<br><a href="https://www.furtherfaster.co.nz/">Further Faster ↗</a></p><a href="#main" class="back-top">Back to top ↑</a></div></footer>
