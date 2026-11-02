@@ -118,7 +118,7 @@ p {
 
 .partner-brand img {
   display:block;
-  width:140px;
+  width:165px;
   height:auto
 }
 
@@ -913,7 +913,7 @@ h1 em {
     width:calc(100% - 48px)
   }
   .partner-brand img {
-    width:125px
+    width:140px
   }
   .hero {
     gap:28px
@@ -974,7 +974,7 @@ h1 em {
     justify-self:end
   }
   .partner-brand img {
-    width:110px
+    width:130px
   }
   .hero {
     grid-template-columns:1fr;
