@@ -118,7 +118,7 @@ p {
 
 .partner-brand img {
   display:block;
-  width:165px;
+  width:122px;
   height:auto
 }
 
@@ -445,7 +445,7 @@ h1 em {
 }
 
 .pricing-group+.pricing-group {
-  margin-top:52px
+  margin-top:80px
 }
 
 .pricing-group-title {
@@ -480,7 +480,8 @@ h1 em {
   color:var(--muted)
 }
 
-.series-price {
+.series-price,
+.price-note {
   font-size:.8rem;
   margin:0;
   color:var(--muted)
@@ -912,7 +913,7 @@ h1 em {
     width:calc(100% - 48px)
   }
   .partner-brand img {
-    width:140px
+    width:110px
   }
   .hero {
     gap:28px
@@ -973,7 +974,7 @@ h1 em {
     justify-self:end
   }
   .partner-brand img {
-    width:130px
+    width:100px
   }
   .hero {
     grid-template-columns:1fr;

@@ -57,7 +57,7 @@
     <div class="price-grid">
       <article class="price-card"><h4>Adults</h4><p class="price">$30</p></article>
       <article class="price-card"><h4>Junior / Student</h4><p class="price">$25</p></article>
-      <article class="price-card"><h4>Under 12</h4><p class="price">Free</p><p class="series-price">Must run with an adult over 18.</p></article>
+      <article class="price-card"><h4>Under 12</h4><p class="price">Free</p><p class="price-note">Must run with an adult over 18.</p></article>
     </div>
   </div>
   <div class="pricing-group">
