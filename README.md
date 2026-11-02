@@ -62,6 +62,7 @@ lockfile for local reproducibility, update it when the action's dependencies cha
 - `_layouts/default.html`: shared HTML structure and metadata.
 - `assets/css/style.css`: styling.
 - `assets/images/logo.jpg`: supplied temporary logo; replace with a higher-quality asset later.
+- `assets/images/further-faster-logo.png`: linked Further Faster partner logo used in the header.
 - `assets/images/reports/`: locally stored report photographs.
 - `404.html`: missing-page content.
 - `.github/workflows/pages.yml`: build validation and deployment.
@@ -80,8 +81,8 @@ links resolve from the custom domain root.
 ## Why Jekyll?
 
 The homepage content was adapted from <https://www.canterburyrogaine.com/Default.aspx>.
-The 2027 series dates and venues are published. Event-day details and fees are
-marked as pending confirmation until updated information is available.
+The 2027 series dates and venues are published. Fees remain marked as pending
+confirmation until updated information is available.
 The entry button is deliberately disabled and has no registration link or handler.
 
 The initial results were imported from

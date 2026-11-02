@@ -146,6 +146,12 @@ p {
   margin-bottom:22px
 }
 
+.hero-copy > .eyebrow {
+  font-size:1.05rem;
+  letter-spacing:2.4px;
+  margin-bottom:26px
+}
+
 .red-line {
   width:24px;
   height:2px;
@@ -955,6 +961,10 @@ h1 em {
   .eyebrow {
     font-size:.6rem;
     letter-spacing:1.5px
+  }
+  .hero-copy > .eyebrow {
+    font-size:.82rem;
+    letter-spacing:1.8px
   }
   h1 {
     font-size:clamp(2.8rem,11.5vw,4rem)
