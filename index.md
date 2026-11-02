@@ -51,9 +51,9 @@
 </div></section>
 
 <section id="entry" class="section container" aria-labelledby="entry-title">
-  <div class="section-heading"><div><p class="eyebrow">Bring your people</p><h2 id="entry-title">Make an evening of it.</h2></div><p>Indicative pricing · NZD<br>2027 fees to be confirmed</p></div>
+  <div class="section-heading"><div><p class="eyebrow">Bring your people</p><h2 id="entry-title">Make an evening of it.</h2></div></div>
   <div class="price-grid">
-    <article class="price-card"><h3>Adults</h3><p class="price">$30<span> / event</span></p><p class="series-price">$100 for the series</p></article>
+    <article class="price-card"><h3>Adults</h3><p class="price">$30<span> / event</span></p><p class="series-price">$100 for the Canterbury Rogaine Series (Series excludes the Christmas Rogaine)</p></article>
     <article class="price-card"><h3>Junior / Student</h3><p class="price">$25<span> / event</span></p><p class="series-price">$80 for the series</p></article>
     <article class="price-card"><h3>Under 12</h3><p class="price">Free</p><p class="series-price">Must run with an adult over 18.</p></article>
   </div>
