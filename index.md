@@ -46,7 +46,7 @@
 </section>
 
 <section id="details" class="details-section" aria-labelledby="details-title"><div class="container details-grid">
-  <div><p class="eyebrow">On the day</p><h2 id="details-title">A map. Your team.<br>A fresh perspective.</h2><p>Explore hills, tussock and forest at your own pace. Moderate fitness is enough; expert navigation isn’t needed. Families are welcome. Keep teammates within earshot.</p><p class="small-note">Event-day details are pending confirmation for 2027.</p></div>
+  <div><p class="eyebrow">On the day</p><h2 id="details-title">A map. Your team.<br>A fresh perspective.</h2><p>Explore hills, tussock and forest at your own pace. Moderate fitness is enough; expert navigation isn’t needed. Families are welcome. Keep teammates within earshot.</p></div>
   <dl class="details-list"><div><dt>Registration</dt><dd>From 4:30 pm</dd></div><div><dt>Start window</dt><dd>5:00–7:00 pm</dd></div><div><dt>Scoring</dt><dd>Navlight electronic scoring</dd></div><div><dt>Plan ahead</dt><dd>Pre-entry speeds registration and guarantees a map.</dd></div><div><dt>Results</dt><dd>Published after each event at rogaine-results.com.</dd></div></dl>
 </div></section>
 
