@@ -110,16 +110,20 @@ p {
   color:var(--red)
 }
 
-.header-location {
-  font-size:.7rem;
-  text-transform:uppercase;
-  letter-spacing:1.3px
+.partner-brand {
+  display:block;
+  flex:0 0 auto;
+  line-height:0
 }
 
-.header-location span {
-  color:var(--red);
-  font-size:1.2rem;
-  margin-left:12px
+.partner-brand img {
+  display:block;
+  width:165px;
+  height:auto
+}
+
+.partner-brand:hover img {
+  opacity:.72
 }
 
 .hero {
@@ -879,8 +883,8 @@ h1 em {
   .container {
     width:calc(100% - 48px)
   }
-  .header-location {
-    display:none
+  .partner-brand img {
+    width:140px
   }
   .hero {
     gap:28px
@@ -917,18 +921,31 @@ h1 em {
     width:calc(100% - 40px)
   }
   .site-header {
+    display:grid;
+    grid-template-columns:90px 1fr;
     min-height:100px;
-    gap:12px
+    gap:4px 12px;
+    padding-block:5px 14px
   }
   .brand img {
     width:90px;
     height:90px
   }
   .site-header nav {
+    grid-column:1 / -1;
+    grid-row:2;
     gap:8px 13px;
     font-size:.65rem;
     flex-wrap:wrap;
-    justify-content:flex-end;
+    justify-content:center;
+  }
+  .partner-brand {
+    grid-column:2;
+    grid-row:1;
+    justify-self:end
+  }
+  .partner-brand img {
+    width:130px
   }
   .hero {
     grid-template-columns:1fr;
