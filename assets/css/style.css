@@ -316,15 +316,6 @@ h1 em {
   margin-bottom:14px
 }
 
-.date-note {
-  font-size:.75rem;
-  color:var(--muted);
-  margin:0 0 24px;
-  padding:12px 16px;
-  background:#eeece4;
-  border-left:2px solid var(--red)
-}
-
 .event {
   display:grid;
   grid-template-columns:50px 100px 1fr 110px;
@@ -370,6 +361,23 @@ h1 em {
 .event-day {
   font-size:.75rem;
   color:var(--muted)
+}
+
+.event-series-heading {
+  border-top:1px solid var(--line);
+  padding:32px 0 12px;
+  margin-top:0
+}
+
+.event-series-heading .eyebrow {
+  margin-bottom:8px
+}
+
+.event-series-heading h3,
+.pricing-group-title {
+  margin:0;
+  font-size:1.15rem;
+  letter-spacing:-.2px
 }
 
 .details-section {
@@ -432,15 +440,29 @@ h1 em {
   margin-top:20px
 }
 
+.pricing-group {
+  margin-top:30px
+}
+
+.pricing-group+.pricing-group {
+  margin-top:52px
+}
+
+.pricing-group-title {
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line)
+}
+
 .price-card {
   border:1px solid var(--line);
   border-top:3px solid var(--red);
   padding:28px
 }
 
-.price-card h3 {
+.price-card h3,
+.price-card h4 {
   font-size:.85rem;
-  margin-bottom:22px
+  margin:0 0 22px
 }
 
 .price {
@@ -910,7 +932,7 @@ h1 em {
     gap:40px
   }
   .event {
-    grid-template-columns:30px 80px 1fr 95px;
+    grid-template-columns:42px 80px 1fr 95px;
     gap:16px
   }
   .price-card {
@@ -1020,7 +1042,7 @@ h1 em {
     margin-bottom:22px
   }
   .event {
-    grid-template-columns:20px 65px 1fr;
+    grid-template-columns:36px 65px 1fr;
     gap:12px;
     padding-block:22px
   }
@@ -1054,7 +1076,8 @@ h1 em {
   .price-card {
     padding:24px
   }
-  .price-card h3 {
+  .price-card h3,
+  .price-card h4 {
     margin-bottom:18px
   }
   .price {

@@ -34,10 +34,10 @@
 <div class="series-strip"><div class="container"><span><strong>Summer</strong> evenings outdoors</span><span><strong>Together</strong> is better</span><span><strong>Your</strong> pace, your route</span></div></div>
 
 <section id="events" class="section container" aria-labelledby="events-title">
-  <div class="section-heading"><div><p class="eyebrow">The calendar</p><h2 id="events-title">Places to explore.</h2></div><p>Five Wednesday events<br><strong>2027 series</strong></p></div>
-  <p class="date-note"><strong>Dates confirmed:</strong> entry details and fees will be added when available.</p>
+  <div class="section-heading"><div><p class="eyebrow">The calendar</p><h2 id="events-title">Places to explore.</h2></div><p>One Christmas Rogaine<br><strong>Four-event 2027 series</strong></p></div>
   <div class="event-list">
-    <article class="event"><span class="event-number">TW</span><div class="event-date"><strong>16</strong><span>DEC 2026</span></div><h3>Christmas Twilight Rogaine · Corsair Bay</h3><span class="event-day">Wednesday</span></article>
+    <article class="event"><span class="event-number">XMAS</span><div class="event-date"><strong>16</strong><span>DEC 2026</span></div><h3>Further Faster Christmas Rogaine · Corsair Bay</h3><span class="event-day">Wednesday</span></article>
+    <div class="event-series-heading"><p class="eyebrow">Four-event series</p><h3>Further Faster Canterbury Rogaine Series</h3></div>
     <article class="event"><span class="event-number">01</span><div class="event-date"><strong>13</strong><span>JAN 2027</span></div><h3>Halswell Quarry</h3><span class="event-day">Wednesday</span></article>
     <article class="event"><span class="event-number">02</span><div class="event-date"><strong>20</strong><span>JAN 2027</span></div><h3>Barnett Park</h3><span class="event-day">Wednesday</span></article>
     <article class="event"><span class="event-number">03</span><div class="event-date"><strong>27</strong><span>JAN 2027</span></div><h3>Mt Vernon</h3><span class="event-day">Wednesday</span></article>
@@ -52,10 +52,21 @@
 
 <section id="entry" class="section container" aria-labelledby="entry-title">
   <div class="section-heading"><div><p class="eyebrow">Bring your people</p><h2 id="entry-title">Make an evening of it.</h2></div></div>
-  <div class="price-grid">
-    <article class="price-card"><h3>Adults</h3><p class="price">$30<span> / event</span></p><p class="series-price">$100 for the Canterbury Rogaine Series (Series excludes the Christmas Rogaine)</p></article>
-    <article class="price-card"><h3>Junior / Student</h3><p class="price">$25<span> / event</span></p><p class="series-price">$80 for the series</p></article>
-    <article class="price-card"><h3>Under 12</h3><p class="price">Free</p><p class="series-price">Must run with an adult over 18.</p></article>
+  <div class="pricing-group">
+    <h3 class="pricing-group-title">Further Faster Christmas Rogaine</h3>
+    <div class="price-grid">
+      <article class="price-card"><h4>Adults</h4><p class="price">$30</p></article>
+      <article class="price-card"><h4>Junior / Student</h4><p class="price">$25</p></article>
+      <article class="price-card"><h4>Under 12</h4><p class="price">Free</p><p class="series-price">Must run with an adult over 18.</p></article>
+    </div>
+  </div>
+  <div class="pricing-group">
+    <h3 class="pricing-group-title">Further Faster Canterbury Rogaine Series</h3>
+    <div class="price-grid">
+      <article class="price-card"><h4>Adults</h4><p class="price">$30<span> / event</span></p><p class="series-price">$100 for the Canterbury Rogaine Series (Series excludes the Christmas Rogaine)</p></article>
+      <article class="price-card"><h4>Junior / Student</h4><p class="price">$25<span> / event</span></p><p class="series-price">$80 for the series</p></article>
+      <article class="price-card"><h4>Under 12</h4><p class="price">Free</p><p class="series-price">Must run with an adult over 18.</p></article>
+    </div>
   </div>
   <p class="responsibility"><strong>Participant responsibility</strong> · Participation is at your own risk. Organisers and landowners accept no responsibility for accidents or injuries.</p>
 </section>

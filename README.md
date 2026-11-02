@@ -81,8 +81,7 @@ links resolve from the custom domain root.
 ## Why Jekyll?
 
 The homepage content was adapted from <https://www.canterburyrogaine.com/Default.aspx>.
-The 2027 series dates and venues are published. Fees remain marked as pending
-confirmation until updated information is available.
+The 2027 series dates, venues and pricing are published.
 The entry button is deliberately disabled and has no registration link or handler.
 
 The initial results were imported from
