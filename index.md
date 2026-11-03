@@ -71,4 +71,4 @@
   <p class="responsibility"><strong>Participant responsibility</strong> · Participation is at your own risk. Organisers and landowners accept no responsibility for accidents or injuries.</p>
 </section>
 
-<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><p>Series supporter<br><a href="https://www.furtherfaster.co.nz/">Further Faster ↗</a></p><a href="#main" class="back-top">Back to top ↑</a></div></footer>
+<footer class="site-footer"><div class="container footer-inner"><div><strong>Canterbury Rogaine Series</strong><p>Find your way. Together.</p></div><p>Contact us<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p><p>Series supporter<br><a href="https://www.furtherfaster.co.nz/">Further Faster ↗</a></p><a href="#main" class="back-top">Back to top ↑</a></div></footer>
