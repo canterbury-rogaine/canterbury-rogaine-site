@@ -12,7 +12,7 @@
     <p class="eyebrow"><span class="red-line"></span> Further Faster · Summer rogaine series</p>
     <h1 id="hero-title">Your evening.<br>Your route.<br><em>Your adventure.</em></h1>
     <p class="hero-intro">Swap the everyday for the Port Hills. Summer evenings of exploration, fresh air and a little friendly competition.</p>
-    <div class="hero-actions"><a class="button" aria-describedby="entry-status" href="https://entero.co.nz/evento.php?eventName=crs-2027">Enter the series <span aria-hidden="true">↗</span></a><a class="text-link" href="#events">Explore the events ↓</a></div>
+    <div class="hero-actions"><a class="button" aria-describedby="entry-status" href="https://entero.co.nz/evento.php?eventName=crs-2027">Enter Now! <span aria-hidden="true">↗</span></a><a class="text-link" href="#events">Explore the events ↓</a></div>
   </div>
   <div class="route-art" aria-hidden="true">
     <svg viewBox="0 0 500 540" xmlns="http://www.w3.org/2000/svg">
