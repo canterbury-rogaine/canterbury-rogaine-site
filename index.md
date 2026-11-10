@@ -13,7 +13,7 @@
     <h1 id="hero-title">Your evening.<br>Your route.<br><em>Your adventure.</em></h1>
     <p class="hero-intro">Swap the everyday for the Port Hills. Summer evenings of exploration, fresh air and a little friendly competition.</p>
     <p class="season">2027 series dates confirmed <span>Entry details to come</span></p>
-    <div class="hero-actions"><button class="button" type="button" disabled aria-describedby="entry-status">Enter the series <span aria-hidden="true">↗</span></button><a class="text-link" href="#events">Explore the events ↓</a></div>
+    <div class="hero-actions"><a class="button" aria-describedby="entry-status" href="https://entero.co.nz/evento.php?eventName=crs-2027">Enter the series <span aria-hidden="true">↗</span></button><a class="text-link" href="#events">Explore the events ↓</a></div>
     <p id="entry-status" class="entry-status">Online entry is not available on this site yet.</p>
   </div>
   <div class="route-art" aria-hidden="true">
