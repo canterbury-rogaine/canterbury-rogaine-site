@@ -206,7 +206,8 @@ h1 em {
   display:inline-flex;
   gap:32px;
   align-items:center;
-  border-radius:2px
+  border-radius:2px;
+  text-decoration-line: none;
 }
 
 .button:disabled {
